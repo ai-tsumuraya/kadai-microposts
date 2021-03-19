@@ -8,7 +8,7 @@ class MicropostsController < ApplicationController
       flash[:success] = 'Your Message has been posted successfully.'
       redirect_to root_url
     else
-      @microposts = current_user.microposts.order(id: :desc).page(params[:page])
+      @microposts = current_user.feed_microposts.order(id: :desc).page(params[:page])
       flash.now[:danger] = "Could'nt post the message."
       render 'toppages/index'
     end
