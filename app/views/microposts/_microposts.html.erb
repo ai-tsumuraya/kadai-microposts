@@ -16,6 +16,11 @@
         </div>
       </div>
     </li>
-    <% end %>
+    <li class="media mb-3">
+      <div class="offset mb-3">
+        <%= render 'favorites/favorite_button', micropost: micropost %>
+      </div>
+    </li>
+  <% end %>
     <%= paginate microposts %>
 </ul>
